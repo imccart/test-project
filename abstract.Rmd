@@ -1,0 +1,35 @@
+---
+title: "Titles are boring"
+author: Ian McCarthy
+date: January 2021
+geometry: "left=2cm,right=2cm,top=1cm,bottom=2cm"
+fontsize: 11pt
+subparagraph: yes
+header-includes:
+   - \usepackage{setspace}
+   - \singlespacing
+   - \usepackage{titlesec}
+   - \titlespacing{\section}{0pt}{12pt plus 2pt minus 1pt}{0pt plus 1pt minus 1pt}
+   - \titlespacing{\subsection}{0pt}{12pt plus 2pt minus 1pt}{0pt plus 1pt minus 1pt}
+   - \titlespacing{\subsubsection}{0pt}{12pt plus 2pt minus 1pt}{0pt plus 1pt minus 1pt}
+output: 
+  pdf_document2:
+    keep_tex: TRUE
+    toc: FALSE
+    number_sections: FALSE
+bibliography: 'BibTeX_Library.bib'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, modelsummary, scales, knitr, kableExtra)
+```
+
+```{r, include=FALSE}
+load("data/R_workspace.Rdata")
+```
+
+### Abstract:
+Does spending improve health? @martin2008 says yes. We find some cool stuff that says something no one has ever thought of before. We find average spending of `r dollar(mean.exp)`. What we find is totally accurate and indisputable, yet completely novel and significant. This is the best paper ever. I have no reservations in claiming that I will win a Nobel Prize because of this paper. Having written this paper, I can die a happy man.
+
+# References
